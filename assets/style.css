@@ -1,0 +1,19 @@
+:root{--bg:#fbfaf6;--fg:#222;--muted:#666;--accent:#2f6f5e;--rule:#ddd8cc;--ok:#2f6f5e;--bad:#a23b3b;--light:#f0e6cc;--dark:#a98c64;--pale:var(--light);--piece:#14130f}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1d1c;--fg:#e8e6df;--muted:#a09d94;--accent:#7fc4ae;--rule:#3a3b39;--ok:#7fc4ae;--bad:#e08a8a}}
+body{background:var(--bg);color:var(--fg);font:18px/1.6 Georgia,serif;max-width:40rem;margin:0 auto;padding:2rem 16px 4rem}
+h1{font-size:2rem;line-height:1.2;margin:.2rem 0}h2{font-size:1.2rem;margin-top:2rem;border-top:1px solid var(--rule);padding-top:1rem}
+.meta,.note{color:var(--muted);font-size:.85rem}a{color:var(--accent)}
+.win{border-left:3px solid var(--accent);padding:.1rem 1rem;margin:1.2rem 0}
+.board{display:grid;grid-template-columns:repeat(8,1fr);width:min(100%,22rem);aspect-ratio:1;margin:1rem 0;border:2px solid var(--fg)}
+.board div{display:flex;align-items:center;justify-content:center;font-size:clamp(1.2rem,6vw,2rem)}
+.board .l{background:var(--light);color:#111}.board .d{background:var(--dark);color:#111}
+.quiz{margin:1.2rem 0;padding:1rem;border:1px solid var(--rule);border-radius:6px}
+.quiz button{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.5rem .8rem;font:inherit;background:transparent;color:var(--fg);border:1px solid var(--rule);border-radius:4px;cursor:pointer}
+.quiz button:hover{border-color:var(--accent)}.quiz .right{border-color:var(--ok);color:var(--ok)}.quiz .wrong{border-color:var(--bad);color:var(--bad)}
+.fb{font-size:.9rem;min-height:1.4rem;margin:.3rem 0 0}
+.drill{margin:1.4rem 0}.drill .board button{border:0;padding:0;font:inherit;font-size:clamp(1.2rem,6vw,2rem);color:var(--piece);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.drill .board button.l{background:var(--pale)}.drill .board button.d{background:var(--dark)}
+.drill .board button.sel{box-shadow:inset 0 0 0 4px var(--accent)}.drill .board button.ok{box-shadow:inset 0 0 0 4px var(--ok);background:var(--ok)}
+.drill .board button.miss{box-shadow:inset 0 0 0 4px #d6a017}.drill .board button.bad{box-shadow:inset 0 0 0 4px var(--bad);background:var(--bad)}
+.drill .row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}.drill .row button{font:inherit;padding:.4rem .9rem;background:transparent;color:var(--fg);border:1px solid var(--accent);border-radius:4px;cursor:pointer}
+.drill .fb{min-height:1.4rem}
